@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &610727525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9056931232875766624, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
+  m_PrefabInstance: {fileID: 6057571690105470285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &610727528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610727525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9547c859a6a0d13419bc04bf15a3ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 6187528643146996731, guid: 9a5db10d2a3e75e4098160f3477cd3d4, type: 3}
+  speed: 10
+  leftAndRightEdge: 25
+  chanceToChangeDirections: 0.1
+  secondsBetweenAppleDrops: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +250,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -309,6 +332,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8577131e35157b04cac863f0e290055b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 2139553387304215194, guid: a9c4ddaaa2fad8943bb3dc2f1fbaf598, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
+  basketList: []
 --- !u!1001 &6057571690105470285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -323,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2953234788470925219, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2953234788470925219, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -357,14 +397,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4742075455168236578, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125962243426528120, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844857654183516721, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9056931232875766624, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
+    - target: {fileID: 9056931232875766624, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9056931232875766624, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 610727528}
   m_SourcePrefab: {fileID: 100100000, guid: 96f11769206cf8b4fa309c983686abbb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
